@@ -1,0 +1,20 @@
+required_fields:
+  - status
+  - date
+  - decisor
+  - tags
+optional_fields:
+  - amends
+  - supersedes
+  - aceita_em
+status_values:
+  - draft
+  - proposed
+  - aceita
+  - retirada
+  - superseded
+required_headings:
+  - "^## Contexto"
+  - "^## Decisão"
+  - "^## Consequências"
+filename_pattern: "^ADR-[0-9]{3}-[a-z0-9-]+\\.md$"

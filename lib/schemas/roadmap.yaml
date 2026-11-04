@@ -1,0 +1,10 @@
+required_fields:
+  - title
+  - status
+  - date
+  - project
+  - last_updated
+required_headings:
+  - "^## Estado atual"
+  - "^## Wave em curso"
+  - "^## Próximas waves"

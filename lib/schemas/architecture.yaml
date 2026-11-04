@@ -1,0 +1,9 @@
+required_fields:
+  - title
+  - project
+  - last_updated
+optional_fields:
+  - status
+  - tags
+required_headings:
+  - "^## "

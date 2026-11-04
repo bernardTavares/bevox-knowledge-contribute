@@ -1,0 +1,20 @@
+required_fields:
+  - title
+  - status
+  - date
+  - decisor
+  - project
+optional_fields:
+  - tags
+  - last_updated
+status_values:
+  - draft
+  - proposed
+  - accepted
+  - retired
+required_headings:
+  - "^## Contexto"
+  - "^## Personas"
+  - "^## Problemas"
+  - "^## Objetivos"
+  - "^## Out-of-scope"

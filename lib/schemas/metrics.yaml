@@ -1,0 +1,14 @@
+required_fields:
+  - project
+  - owner
+  - last_updated
+  - type
+type_values:
+  - leading
+  - lagging
+  - operational
+  - quality
+required_headings:
+  - "^## Definição"
+  - "^## Cálculo"
+  - "^## Fonte de dados"

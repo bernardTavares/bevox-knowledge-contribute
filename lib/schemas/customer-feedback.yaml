@@ -1,0 +1,18 @@
+required_fields:
+  - source
+  - date
+  - severity
+  - persona
+  - project
+  - status
+status_values:
+  - new
+  - triaged
+  - linked
+  - resolved
+  - rejected
+required_headings:
+  - "^## Feedback raw"
+  - "^## Context"
+  - "^## Impact"
+  - "^## Triage"

@@ -1,0 +1,19 @@
+required_fields:
+  - title
+  - date
+  - status
+  - project
+optional_fields:
+  - epic
+  - prioridade
+  - dependencias
+status_values:
+  - draft
+  - approved
+  - in-progress
+  - delivered
+  - retired
+required_headings:
+  - "^## .*[Vv]is[ãa]o [Gg]eral"
+  - "^## .*[Aa]rquitetura"
+  - "^## .*[Ii]mplementa"

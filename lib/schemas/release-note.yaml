@@ -1,0 +1,12 @@
+required_fields:
+  - version
+  - date
+  - project
+  - type
+type_values:
+  - major
+  - minor
+  - patch
+  - hotfix
+required_headings:
+  - "^## Highlights"

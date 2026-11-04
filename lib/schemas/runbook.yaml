@@ -1,0 +1,20 @@
+required_fields:
+  - title
+  - project
+  - severity
+  - maintainer
+  - last_tested
+optional_fields:
+  - tags
+required_headings:
+  - "^## Quando aplicar"
+  - "^## Pre-checks"
+  - "^## Steps"
+  - "^## Verification"
+  - "^## Rollback"
+  - "^## Escalation"
+severity_values:
+  - p0
+  - p1
+  - p2
+  - p3
