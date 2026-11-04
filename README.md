@@ -1,5 +1,11 @@
 # bevox-knowledge-contribute
 
+[![tests](https://img.shields.io/badge/tests-49%2F49%20bats-brightgreen)](#) [![license](https://img.shields.io/badge/license-FSL--1.1--MIT-blue)](./LICENSE.md) ![language](https://img.shields.io/github/languages/top/bernardTavares/bevox-knowledge-contribute) ![status](https://img.shields.io/badge/status-used%20internally-orange)
+
+![bevox-knowledge-contribute](docs/assets/social-card.png)
+
+> Part of the [4-layer AI-first company series](https://github.com/bernardTavares). License: FSL-1.1-MIT (source-available, converts to MIT after 2 years)
+
 A **Claude Code skill** that lets coding agents write PRDs, ADRs, specs, runbooks and release notes into a **shared, git-backed knowledge repo**, as proposals only. It never writes them into the code repo and never touches `main`.
 
 It is the Claude Code half of the Bevox knowledge spine. The other half is [bevox-knowledge-sync](https://github.com/bernardTavares/bevox-knowledge-sync), the OpenClaw skill that watches the knowledge repo, snapshots it and turns canonical changes into a one-tap human approval on Telegram.
@@ -8,7 +14,7 @@ It is the Claude Code half of the Bevox knowledge spine. The other half is [bevo
 
 ## Why
 
-Agents that write docs inside each code repo create many copies of the truth. Bevox kept **one knowledge repo** that every agent reads by reference:
+Agents that write docs inside each code repo create many copies of the truth. Bevox's design is **one knowledge repo** that every agent reads by reference:
 - `main` is the canon;
 - `draft/*` branches are proposals that any agent can make and anyone can throw away;
 - only a human promotes a draft to canon.
@@ -83,9 +89,9 @@ bats lib/tests e2e      # 49 tests
 
 ## Known rough edges
 
-- **The templates and schema headings are in Portuguese** (`## Contexto`, `## Decisão`, `## Consequências`…), as they were used at Bevox. The schemas in `lib/schemas/*.yaml` are plain YAML: change the required headings and fields to your language and conventions.
+- **The templates and schema headings are in Portuguese** (`## Contexto`, `## Decisão`, `## Consequências`…), as used at Bevox. The schemas in `lib/schemas/*.yaml` are plain YAML: change the required headings and fields to your language and conventions.
 - The skill text describes the workflow for Claude Code; the helpers do the enforcement. Read `SKILL.md.template` before installing.
-- Promotion to canon (draft → `main`) is out of scope here. At Bevox it went through human review and the approval flow in bevox-knowledge-sync.
+- Promotion to canon (draft → `main`) is out of scope here. In the Bevox setup, it goes through human review and the approval flow in bevox-knowledge-sync.
 
 ## How this was built
 
