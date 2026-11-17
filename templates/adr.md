@@ -1,6 +1,6 @@
 # ADR-XXX: [Titulo curto e ativo]
 
-- **Status:** [proposta | aceita | descartada | substituida-por-ADR-YYY]
+- **Status:** [draft | proposed | aceita | retirada | superseded]
 - **Data:** YYYY-MM-DD
 - **Decisor:** <name>
 - **Tags:** [tag1, tag2]
@@ -25,11 +25,11 @@ Descreve a situacao que torna essa decisao necessaria. Por que precisamos decidi
 
 Qual opcao recomendo e por que. Use evidencias do contexto ou da experiencia.
 
-## Decisao
+## Decisão
 
 [Preenchido quando o status muda para "aceita". Registra qual opcao foi escolhida e qual a razao final.]
 
-## Consequencias
+## Consequências
 
 ### Positivas
 - [...]

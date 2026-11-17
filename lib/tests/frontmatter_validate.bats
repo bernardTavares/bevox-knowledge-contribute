@@ -18,6 +18,28 @@ FIXTURES="$BATS_TEST_DIRNAME/fixtures"
     rm -rf "$(dirname "$tmp")"
 }
 
+@test "frontmatter_validate: accepts a document made from the ADR template" {
+    local template="$BATS_TEST_DIRNAME/../../templates/adr.md"
+    local adr="$BATS_TEST_TMPDIR/ADR-001-from-template.md"
+    {
+        printf '%s\n' '---' 'status: proposed' 'date: 2026-05-01' 'decisor: Example' 'tags: [template]' '---'
+        cat "$template"
+    } > "$adr"
+
+    run "$(helper_path frontmatter_validate.sh)" "$adr" adr
+    [ "$status" -eq 0 ]
+}
+
+@test "frontmatter_validate: ADR template lists the schema statuses" {
+    local schema="$BATS_TEST_DIRNAME/../schemas/adr.yaml"
+    local template="$BATS_TEST_DIRNAME/../../templates/adr.md"
+    local statuses
+    statuses="$(yq -r '.status_values | join(" | ")' "$schema")"
+
+    run grep -Fx -- "- **Status:** [$statuses]" "$template"
+    [ "$status" -eq 0 ]
+}
+
 @test "frontmatter_validate: rejects malformed YAML (exit 1)" {
     run "$(helper_path frontmatter_validate.sh)" "$FIXTURES/invalid-yaml.md" prd
     [ "$status" -eq 1 ]
